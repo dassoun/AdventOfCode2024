@@ -34,7 +34,7 @@ public class Day01b {
 		int size = l1.size();
 		
 		int nb = 0;
-		BigInteger res = BigInteger.valueOf(0);
+		BigInteger res = BigInteger.ZERO;
 
 //		System.exit(0);
 		
