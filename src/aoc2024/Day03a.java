@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 import Utils.FileTransform;
 
-public class Day3a {
+public class Day03a {
 
 	public static void main(String[] args) {
 		
