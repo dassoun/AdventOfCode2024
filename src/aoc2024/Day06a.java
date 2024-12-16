@@ -3,7 +3,7 @@ package aoc2024;
 import Utils.FileTransform;
 import Utils.Vector;
 
-public class Day6a {
+public class Day06a {
 
 	public static void main(String[] args) {
 		String[][] arr = FileTransform.fileTo2DArray("inputs/day06.txt");
