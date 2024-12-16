@@ -46,4 +46,8 @@ public class Vector {
 			y = -1;
 		}
 	}
+	
+	public String toString() {
+		return "x = " + x + ", y = " + y;
+	}
 }
