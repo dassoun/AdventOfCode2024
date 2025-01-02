@@ -28,19 +28,53 @@ public class Day19a {
 			}
 			i++;
 		}
-		i = 1;
 		
 		int res = 0;
-		
-		for (String s1 : diseredDesignList) {
-			TreeNode rootTreeNode = new TreeNode(s1);
-			
-			rootTreeNode.buildTree(towelPatternArr);
-			
-			if (BreadthFirstSearchPrintTreeNodes("", rootTreeNode) != null) {
-				res++;
+
+		for (String s : diseredDesignList) {
+			boolean found = false;
+			int offset = 0;
+			i = 0;
+			while (!found && i < towelPatternArr.length) {
+				System.out.println(s);
+				System.out.println(towelPatternArr[i]);
+				if (s.length() >= offset + towelPatternArr[i].length()) {
+					System.out.println(s.substring(offset, offset + towelPatternArr[i].length()));
+				}
+				System.out.println(s.length());
+				System.out.println(offset + towelPatternArr[i].length());
+				System.out.println("===============");
+				if (s.length() >= offset + towelPatternArr[i].length()) {
+					if (s.substring(offset, offset + towelPatternArr[i].length()).equals(towelPatternArr[i])) {
+						offset += towelPatternArr[i].length();
+						i = 0;
+						
+						if (offset >= s.length()) {
+							
+							found = true;
+							res++;
+							
+//							System.out.println(s);
+						}
+						
+					} else {
+						i++;
+					}
+				} else {
+					i++;
+				}
 			}
 		}
+		
+//		for (String s1 : diseredDesignList) {
+//			TreeNode rootTreeNode = new TreeNode(s1);
+//			
+//			rootTreeNode.buildTree(towelPatternArr);
+//			
+//			if (BreadthFirstSearchPrintTreeNodes("", rootTreeNode) != null) {
+//				res++;
+//			}
+//		}
 		
 		System.out.println(res);
 	}
