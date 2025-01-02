@@ -1,6 +1,5 @@
 package aoc2024;
 
-import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 
